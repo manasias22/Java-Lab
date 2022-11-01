@@ -1,0 +1,88 @@
+//Multiple Inheritance
+
+CODE:
+
+import java.util.*;
+class std
+{
+    int rn,total;
+    int marks[]=new int[5];
+    String name=new String();
+    
+    void read()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the name");
+        name=sc.nextLine();
+        System.out.println("enter the roll no.");
+        rn=sc.nextInt();
+        
+        total = 0;
+        for(int i=0;i<5;i++)
+        {
+            System.out.println("enter marks of subject"+i);
+            marks[i]=sc.nextInt();
+            total=total+marks[i];
+        }
+
+  }
+    
+}
+
+interface sports 
+{
+    final int sm=10;
+    public void displaysm();
+    
+}
+
+class result extends std implements sports
+{
+    public void displaysm()
+    {
+        System.out.println("sports mark="+sm);
+        
+    }
+        int newt;
+        float per;
+        public void displayms()
+        {
+            newt=total+sm;
+            per=newt/5;
+            System.out.println("percentage="+per);
+            
+        }
+    
+}
+
+class Main
+{
+	public static void main(String[] args) {
+	
+		result r1=new result();
+		r1.read();
+		
+		r1.displayms();
+		r1.displaysm();
+		
+		
+		
+	}
+}
+ 
+
+OUTPUT:
+
+enter the nameamit
+enter the roll no.
+50
+enter marks of subject0
+50
+enter marks of subject1
+60
+enter marks of subject2
+70
+enter marks of subject350
+enter marks of subject4
+80
+percentage=64.0sports mark=10

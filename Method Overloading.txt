@@ -1,0 +1,44 @@
+//Method Overloading
+
+CODE:
+
+import java.util.Scanner;
+
+class Geo{
+    void calArea(int s){
+        int area = s*s;
+        System.out.println("Area of square: "+area);
+    }
+
+    void calArea(int l, int b){
+        int area = l*b;
+        System.out.println("Area of Rectangle: "+area);
+    }
+
+    void calArea(double r){
+        double area = 3.141*r*r;
+        System.out.println("Area of Circle: "+area);
+    }
+
+    void calArea(int b, double h){
+        double area = 0.5*b*h;
+        System.out.println("Area of Triangle: "+area);
+    }
+
+}
+class Area{
+    public static void main(String[] args) {
+        Geo g1 = new Geo();
+        g1.calArea(5);
+        g1.calArea(5,6);
+        g1.calArea(8.8);
+        g1.calArea(1,2.2);
+    }
+}
+
+OUTPUT:
+
+Area of square: 25
+Area of Rectangle: 30
+Area of Circle: 243.23904000000005
+Area of Triangle: 1.1

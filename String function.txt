@@ -1,0 +1,53 @@
+//String Functions
+
+CODE:
+
+import java.util.Scanner;
+
+class TextCount{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		String text = new String();
+		text = sc.nextLine();
+		int length = text.length();
+		int alpha = 0;
+		int digits = 0;
+		int special = 0;
+		int space = 0;
+		
+		for(int i = 0; i < length ; i++){
+			if((text.charAt(i) >= 'A' && text.charAt(i) <= 'Z')||(text.charAt(i) >= 'a' && text.charAt(i) <= 'z')){
+				alpha++;
+			}
+			else if(text.charAt(i) >= '0' && text.charAt(i) <= '9'){
+				digits++;
+			}
+			else if(text.charAt(i) == ' '){
+				space++;
+			}
+			else{
+				special++;
+			}
+		}
+
+		System.out.println("\nNumber of alphabets: "+alpha);
+		System.out.println("\nNumber of digits: "+digits);
+		System.out.println("\nNumber of spaces: "+space);
+		System.out.println("\nNumber of special characters: "+special);
+	}
+}
+
+OUTPUT:
+
+Heyy! We're meeting after 4 months.
+
+Number of alphabets: 26
+
+Number of digits: 1
+
+Number of spaces: 5
+
+Number of special characters: 3
+
+		
+

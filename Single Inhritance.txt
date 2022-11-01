@@ -1,0 +1,59 @@
+//Single Inheritance
+
+CODE:
+
+import java.util.Scanner;
+
+class Std{
+	int RN;
+	String Name;
+	
+	void readS(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter roll number and name: ");
+		RN = sc.nextInt();
+		Name = sc.nextLine();
+	}
+	
+	void dispS(){
+		System.out.println("\nRoll number: "+RN+"\nName: "+Name);
+	}
+}
+
+class Dept extends Std{
+	String branch;
+	
+	void readD(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your branch: ");
+		branch = sc.nextLine();
+	}
+
+	void dispD(){
+		System.out.println("Branch: "+branch);
+	}
+}
+
+class College{
+	public static void main(String args[]){
+		Dept d1 = new Dept();
+		d1.readS();
+		d1.readD();
+		d1.dispS();
+		d1.dispD();
+	}
+}
+
+OUTPUT:
+
+Enter roll number and name:
+2 ABC
+Enter your branch:
+COMP
+
+Roll number: 2
+Name:  ABC
+Branch: COMP
+
+		
+

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class SortAndAdd
+{
+ public static void main(String args[])
+ {
+  int temp,n;
+  int add=0;
+  int A[];
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter size of array: ");
+  n = sc.nextInt();
+  A = new int[n];
+  System.out.println("Enter elements: ");
+  for(int i=0; i<n; i++)
+  {
+      A[i] = sc.nextInt();
+  }
+  for(int i=0; i<n-1; i++)
+  {
+   for(int j=i+1; j<n; j++)
+   {
+    if (A[i]>A[j])
+    {
+     temp=A[i];
+     A[i]=A[j];
+     A[j]=temp;
+    }
+   }
+  }
+  System.out.println("Sorted Elements: ");
+  for(int i=0; i<n; i++)
+  {
+   add += A[i];
+   System.out.println(A[i]);
+  }
+  System.out.println("Sum of elements: "+add);
+ }
+}
